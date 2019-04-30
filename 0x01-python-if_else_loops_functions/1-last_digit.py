@@ -8,6 +8,6 @@ if last_d > 5:
 elif last_d == 0:
     print("Last digit of {:d}".format(number) + " is " +
           "{:d} and is 0".format(last_d))
-else:
+elif last_d < 6 and last_d != 0:
     print("Last digit of {:d}".format(number) + " is " +
           "{:d} and is less than 6 and not 0".format(last_d))
