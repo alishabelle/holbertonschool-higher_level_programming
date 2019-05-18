@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 	if (list->next == NULL)
 		return (0);
 
-	skips = list;
+	skips = list->next;
 	node = list;
 
 	while (skips && skips->next && node && node->next)
@@ -25,6 +25,8 @@ int check_cycle(listint_t *list)
 		if (skips == node)
 			return (1);
 		skips = skips->next->next;
+		if (skips == NULL)
+			break;
 		node = node->next;
 	}
 	return (0);
