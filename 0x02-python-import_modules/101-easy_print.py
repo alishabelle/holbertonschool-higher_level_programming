@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-getattr(_builtins_, "print")("#pythoniscool")
+getattr(__builtins__, "print")("#pythoniscool")
