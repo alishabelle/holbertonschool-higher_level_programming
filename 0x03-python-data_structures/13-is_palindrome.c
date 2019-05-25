@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 
-int length_function(int *h);
+int length_function(listint_t *h);
 
 /**
  *is_palindrome - function to check if linked list is palindrome
@@ -11,6 +11,7 @@ int length_function(int *h);
  */
 int is_palindrome(listint_t **head)
 {
+	listint_t **gold = head;
 	listint_t *move;
 	int buffer[3000], i = 0, idk, beg = 0, end;
 
@@ -28,12 +29,12 @@ int is_palindrome(listint_t **head)
 	}
 	buffer[i++] = '\0';
 	i = 0;
-	idk = length_function(buffer);
+	idk = length_function(*gold);
 	if (idk == 1)
 		return (1);
-	for (end = idk - 1; beg < idk; beg++, end--)
+	for (end = idk - 1; beg < idk && end >= 0; beg++, end--)
 	{
-		if (beg >= end)
+		if (beg > end)
 		{
 			return (1);
 		}
@@ -44,21 +45,21 @@ int is_palindrome(listint_t **head)
 	}
 	return (0);
 }
+
 /**
  *length_function - function that returns the length of an array
  *@h: parameter
  * Return: returns an int
  */
-
-
-
-int length_function(int *h)
+int length_function(listint_t *h)
 {
-	int count = 0;
+	listint_t *num = h;
+	int i = 0;
 
-	while (h[count] != '\0')
+	while (num != NULL)
 	{
-		count++;
+		num = num->next;
+		i++;
 	}
-	return (count);
+	return (i);
 }
