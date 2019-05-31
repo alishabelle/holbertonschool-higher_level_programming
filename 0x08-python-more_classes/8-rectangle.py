@@ -64,5 +64,4 @@ class Rectangle:
             raise TypeError("rect_2 must be an instacne of Rectangle")
         if rect_1.area() < rect_2.area():
             return rect_2
-        else:
-            return rect_1
+        return rect_1
