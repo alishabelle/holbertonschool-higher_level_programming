@@ -67,7 +67,6 @@ class Rectangle:
             return rect_2
         return rect_1
 
-    @classmethod
     def square(cls, size=0):
-        naw = Rectangle(size, size)
-        return naw
+        alisha = Rectangle(size, size)
+        return alisha
