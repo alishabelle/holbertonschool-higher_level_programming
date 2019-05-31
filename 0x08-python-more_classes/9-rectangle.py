@@ -69,5 +69,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        alisha = Rectangle(size, size)
-        return alisha
+        lang = Rectangle(size, size)
+        return lang
