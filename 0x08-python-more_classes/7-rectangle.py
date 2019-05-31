@@ -47,7 +47,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ''
         for x in range(self.__height):
-            new_jawn.append(str(type(self).print_symbol) * self.__width)
+            new_jawn.append(str(self.print_symbol) * self.__width)
         return '\n'.join(new_jawn)
 
     def __repr__(self):
