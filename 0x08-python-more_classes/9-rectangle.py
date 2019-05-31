@@ -6,8 +6,8 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     @property
@@ -69,5 +69,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        lang = Rectangle(size, size)
-        return lang
+        naw = Rectangle(size, size)
+        return naw
