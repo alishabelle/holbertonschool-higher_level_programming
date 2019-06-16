@@ -66,6 +66,11 @@ class Rectangle(Base):
         """ creating area of rect """
         return (self.__width * self.__height)
 
+    def display(self):
+        """ creating display of rect """
+        for i in range(self.__height):
+            print("#" * self.width)
+
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}".
                 format(self.id, self.__x, self.__y,
