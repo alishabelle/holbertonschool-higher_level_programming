@@ -79,6 +79,8 @@ class Rectangle(Base):
                        self.__width, self.__height))
 
     def update(self, *args):
+        """ update some file """
+
         a = 0
         
         for idx in args:
