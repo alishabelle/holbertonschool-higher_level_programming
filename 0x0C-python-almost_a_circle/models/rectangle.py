@@ -82,7 +82,7 @@ class Rectangle(Base):
         """ update some file """
 
         a = 0
-        
+
         for idx in args:
             a += 1
             if a == 1:
