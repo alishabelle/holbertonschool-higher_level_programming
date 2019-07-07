@@ -106,7 +106,7 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key == 'id':
                     setattr(self, key, value)
-                if key == 'width': 
+                if key == 'width':
                     setattr(self, key, value)
                 if key == 'height':
                     setattr(self, key, value)
@@ -117,6 +117,6 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ prints dict of object """
-        jawn = {'id': self.id, 'width': self.width, 'height': self.height,\
+        jawn = {'id': self.id, 'width': self.width, 'height': self.height,
                 'x': self.x, 'y': self.y}
         return jawn
