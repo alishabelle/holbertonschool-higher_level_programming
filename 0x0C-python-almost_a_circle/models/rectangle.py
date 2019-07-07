@@ -16,22 +16,27 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ returns the value of width """
         return self.__width
 
     @property
     def height(self):
+        """ returns the value of height """
         return self.__height
 
     @property
     def x(self):
+        """ returns the value of x """
         return self.__x
 
     @property
     def y(self):
+        """ returns the value of y """
         return self.__y
 
     @width.setter
     def width(self, value):
+        """ sets value of width """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -40,6 +45,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """ set value of height """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -48,6 +54,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """ set value of x """
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -56,6 +63,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """ sets value of y """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -74,15 +82,14 @@ class Rectangle(Base):
             print(' ' * self.x + "#" * self.width)
 
     def __str__(self):
+        """ prints string of rect """
         return ("[Rectangle] ({}) {}/{} - {}/{}".
-                format(self.id, self.__x, self.__y,
-                       self.__width, self.__height))
+                format(self.id, self.x, self.y,
+                       self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update some file """
-
         a = 0
-
         for idx in args:
             a += 1
             if a == 1:
@@ -95,3 +102,21 @@ class Rectangle(Base):
                 self.x = idx
             if a == 5:
                 self.y = idx
+        if not args:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    setattr(self, key, value)
+                if key == 'width': 
+                    setattr(self, key, value)
+                if key == 'height':
+                    setattr(self, key, value)
+                if key == 'x':
+                    setattr(self, key, value)
+                if key == 'y':
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ prints dict of object """
+        jawn = {'id': self.id, 'width': self.width, 'height': self.height,\
+                'x': self.x, 'y': self.y}
+        return jawn
