@@ -1,2 +1,2 @@
---Prints all rows in a table
+-- Prints all rows in a table
 SELECT * FROM first_table;
