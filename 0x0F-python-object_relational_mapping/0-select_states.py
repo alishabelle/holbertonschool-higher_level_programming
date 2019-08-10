@@ -14,12 +14,10 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
 
-
     cur = db.cursor()
     query = "SELECT * FROM states ORDER BY id ASC"
     cur.execute(query)
     records = cur.fetchall()
-
 
     for record in records:
         print(record)
