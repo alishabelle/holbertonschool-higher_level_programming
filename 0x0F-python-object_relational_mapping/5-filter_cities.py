@@ -18,9 +18,6 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name FROM cities INNER JOIN states ON \
 states.id=cities.state_id WHERE states.name = %s", (sys.argv[4],))
     records = cur.fetchall()
-    store = []
-    for record in records:
-        store.append(record[0])
-    print(','.join(store))
-    cur.close()
-    db.close()
+    
+    print(','.join(record[0] for record in records))
+
