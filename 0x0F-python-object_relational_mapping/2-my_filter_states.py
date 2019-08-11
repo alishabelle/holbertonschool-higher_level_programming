@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" lists states in a database starting with N"""
+""" script takes in argument and name matches the argument """
 
 import MySQLdb
 import sys
