@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" script from #2 safe of sql injection """
+""" lists all cities in database """
 
 import MySQLdb
 import sys
