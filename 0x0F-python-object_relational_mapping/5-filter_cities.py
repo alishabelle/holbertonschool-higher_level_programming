@@ -20,6 +20,4 @@ if __name__ == "__main__":
                  WHERE states.name = '{}' \
                  ORDER BY cities.id ASC".format(sys.argv[4]))
     records = cur.fetchall()
-    
-    print(','.join(record[0] for record in records))
-
+    print(','.join([record[0]for record in records]))
