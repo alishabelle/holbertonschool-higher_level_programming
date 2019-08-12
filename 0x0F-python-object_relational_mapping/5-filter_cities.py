@@ -21,3 +21,5 @@ if __name__ == "__main__":
                  ORDER BY cities.id ASC".format(sys.argv[4]))
     records = cur.fetchall()
     print(','.join([record[0]for record in records]))
+    cur.close()
+    db.close()
