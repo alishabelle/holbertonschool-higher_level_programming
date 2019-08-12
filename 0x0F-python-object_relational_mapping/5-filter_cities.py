@@ -14,9 +14,10 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-
-    cur.execute("SELECT cities.name FROM cities INNER JOIN states ON \
-states.id=cities.state_id WHERE states.name = %s", (sys.argv[4],))
+    cur.execute("SELECT cities.name \
+                 FROM cities \
+                 JOIN states ON cities.state_id = states.id \
+                 WHERE states.name = %s", (sys.argv[4],))
     records = cur.fetchall()
     
     print(','.join(record[0] for record in records))
