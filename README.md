@@ -1,1 +1,2 @@
-# holbertonschool-higher_level_programming
+# Holbertonschool-Higher_Level_Programming
+Learning higher level programming, includes Python, SQL, and javascript.
