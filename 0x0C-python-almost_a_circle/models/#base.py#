@@ -1,5 +1,0 @@
-#!/usr/bin/python3
-""" base.py """
-class Base:
-    """ writing class base """
-    

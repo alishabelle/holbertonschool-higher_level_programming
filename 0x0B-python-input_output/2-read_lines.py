@@ -5,6 +5,6 @@
 def read_lines(filename="", nb_lines=0):
     """documentation for reading number of lines"""
     
-    if nb_lines is <= 0 or nb_lines 
-with open(filename) as f:
-        print(f.read(nb_lines), end="")
+    with open(filename) as f:
+        if nb_lines <= 0 or nb_lines >= len(filename):
+            print(f.readlines(nb_lines), end="")

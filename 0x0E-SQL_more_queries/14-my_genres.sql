@@ -1,0 +1,1 @@
+-- script that lists all genres of a show
